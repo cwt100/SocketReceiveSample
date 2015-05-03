@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKj-XR-ZRH">
+                                <rect key="frame" x="116" y="120" width="46" height="30"/>
+                                <state key="normal" title="UDP">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jtO-4h-yTj">
+                                <rect key="frame" x="63" y="208" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePT-K2-e9l">
+                                <rect key="frame" x="268" y="120" width="46" height="30"/>
+                                <state key="normal" title="TCP">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ePT-K2-e9l" firstAttribute="leading" secondItem="zKj-XR-ZRH" secondAttribute="trailing" constant="50" id="9VV-cQ-z3Z"/>
+                            <constraint firstItem="jtO-4h-yTj" firstAttribute="top" secondItem="zKj-XR-ZRH" secondAttribute="bottom" constant="50" id="Iw8-zB-AqG"/>
+                            <constraint firstItem="ePT-K2-e9l" firstAttribute="top" secondItem="zKj-XR-ZRH" secondAttribute="top" id="Lgx-ax-X3D"/>
+                            <constraint firstItem="jtO-4h-yTj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="RhS-Er-ceT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jtO-4h-yTj" secondAttribute="trailing" constant="50" id="Syd-gd-5RB"/>
+                            <constraint firstItem="zKj-XR-ZRH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="100" id="b6d-bU-lpB"/>
+                            <constraint firstItem="zKj-XR-ZRH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="100" id="wU6-qf-ibI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="receiveDataTextView" destination="jtO-4h-yTj" id="kv0-U3-bFR"/>
+                        <outlet property="tcpButton" destination="ePT-K2-e9l" id="Yd9-du-fZp"/>
+                        <outlet property="udpButton" destination="zKj-XR-ZRH" id="Ixd-id-LOg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

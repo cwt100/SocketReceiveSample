@@ -1,0 +1,18 @@
+//
+//  ViewController.h
+//  SocketReceiveSample
+//
+//  Created by Cherry_Cheng on 2015/4/28.
+//  Copyright (c) 2015年 simplo. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *udpButton;
+@property (weak, nonatomic) IBOutlet UIButton *tcpButton;
+
+@property (weak, nonatomic) IBOutlet UITextView *receiveDataTextView;
+
+@end
+
