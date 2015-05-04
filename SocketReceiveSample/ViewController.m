@@ -9,14 +9,16 @@
 #import "ViewController.h"
 #import "UDPObject.h"
 #import "TCPObject.h"
+#import "TCPClientObject.h"
 
-@interface ViewController ()<UDPObjectDelegate, TCPObjectDelegate>
+@interface ViewController ()<UDPObjectDelegate, TCPObjectDelegate, TCPClientObjectDelegate>
 
 @end
 
 @implementation ViewController {
     UDPObject *udpObject;
     TCPObject *tcpObject;
+    TCPClientObject *tcpClientObject;
 }
 
 - (void)viewDidLoad {
@@ -24,6 +26,8 @@
     
     [self.udpButton addTarget:self action:@selector(udpReceive:) forControlEvents:UIControlEventTouchUpInside];
     [self.tcpButton addTarget:self action:@selector(tcpReceive:) forControlEvents:UIControlEventTouchUpInside];
+    [self.tcpClientButton addTarget:self action:@selector(tcpClientReceive:) forControlEvents:UIControlEventTouchUpInside];
+    [self.clearButton addTarget:self action:@selector(clearTextView:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,8 +43,13 @@
     
     udpObject = nil;
     tcpObject = nil;
+    tcpClientObject = nil;
     
     self.receiveDataTextView.text = @"Start";
+}
+
+- (void)clearTextView:(id)sender {
+    self.receiveDataTextView.text = nil;
 }
 
 - (void)udpReceive:(id)sender {
@@ -69,6 +78,22 @@
 - (void)tcpObject:(TCPObject *)tcpObject didReceiveData:(NSData *)receiveData {
     
     NSLog(@"tcpObject receive: %@", receiveData);
+    
+    NSString *xmlString = [[NSString alloc] initWithData:receiveData encoding:NSUTF8StringEncoding];
+    [self.receiveDataTextView insertText:[NSString stringWithFormat:@"%@\n", xmlString]];
+}
+
+- (void)tcpClientReceive:(id)sender {
+    
+    [self clear];
+    
+    tcpClientObject = [[TCPClientObject alloc] init];
+    tcpClientObject.delegate = self;
+}
+
+- (void)tcpClientObject:(TCPClientObject *)tcpClientObject didReceiveData:(NSData *)receiveData {
+    
+    NSLog(@"tcpClientObject receive: %@", receiveData);
     
     NSString *xmlString = [[NSString alloc] initWithData:receiveData encoding:NSUTF8StringEncoding];
     [self.receiveDataTextView insertText:[NSString stringWithFormat:@"%@\n", xmlString]];

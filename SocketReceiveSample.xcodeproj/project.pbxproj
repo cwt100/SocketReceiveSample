@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C260E5F1AF7C36100BFA325 /* TCPClientObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C260E5E1AF7C36100BFA325 /* TCPClientObject.m */; };
 		3C66F0511AEF2A0E001211F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C66F0501AEF2A0E001211F5 /* main.m */; };
 		3C66F0541AEF2A0E001211F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C66F0531AEF2A0E001211F5 /* AppDelegate.m */; };
 		3C66F0571AEF2A0E001211F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C66F0561AEF2A0E001211F5 /* ViewController.m */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C260E5D1AF7C36100BFA325 /* TCPClientObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPClientObject.h; sourceTree = "<group>"; };
+		3C260E5E1AF7C36100BFA325 /* TCPClientObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPClientObject.m; sourceTree = "<group>"; };
 		3C66F04B1AEF2A0E001211F5 /* SocketReceiveSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocketReceiveSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C66F04F1AEF2A0E001211F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C66F0501AEF2A0E001211F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -109,6 +112,8 @@
 				3C6EC80A1AEFE381000AE9B3 /* UDPObject.m */,
 				3C6EC80C1AEFEAA2000AE9B3 /* TCPObject.h */,
 				3C6EC80D1AEFEAA2000AE9B3 /* TCPObject.m */,
+				3C260E5D1AF7C36100BFA325 /* TCPClientObject.h */,
+				3C260E5E1AF7C36100BFA325 /* TCPClientObject.m */,
 			);
 			path = SocketReceiveSample;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C66F07C1AEF3926001211F5 /* GCDAsyncSocket.m in Sources */,
+				3C260E5F1AF7C36100BFA325 /* TCPClientObject.m in Sources */,
 				3C6EC80E1AEFEAA2000AE9B3 /* TCPObject.m in Sources */,
 				3C66F0761AEF2AF3001211F5 /* GCDAsyncUdpSocket.m in Sources */,
 				3C6EC80B1AEFE381000AE9B3 /* UDPObject.m in Sources */,

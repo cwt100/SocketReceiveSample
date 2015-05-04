@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKj-XR-ZRH">
-                                <rect key="frame" x="116" y="120" width="46" height="30"/>
+                                <rect key="frame" x="66" y="120" width="46" height="30"/>
                                 <state key="normal" title="UDP">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -30,26 +30,42 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePT-K2-e9l">
-                                <rect key="frame" x="268" y="120" width="46" height="30"/>
+                                <rect key="frame" x="162" y="120" width="46" height="30"/>
                                 <state key="normal" title="TCP">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIY-4g-Adv">
+                                <rect key="frame" x="187" y="52" width="46" height="30"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gme-IG-3Xh">
+                                <rect key="frame" x="258" y="120" width="80" height="30"/>
+                                <state key="normal" title="TCP Client">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ePT-K2-e9l" firstAttribute="top" secondItem="Gme-IG-3Xh" secondAttribute="top" id="7ab-UK-kjv"/>
                             <constraint firstItem="ePT-K2-e9l" firstAttribute="leading" secondItem="zKj-XR-ZRH" secondAttribute="trailing" constant="50" id="9VV-cQ-z3Z"/>
                             <constraint firstItem="jtO-4h-yTj" firstAttribute="top" secondItem="zKj-XR-ZRH" secondAttribute="bottom" constant="50" id="Iw8-zB-AqG"/>
                             <constraint firstItem="ePT-K2-e9l" firstAttribute="top" secondItem="zKj-XR-ZRH" secondAttribute="top" id="Lgx-ax-X3D"/>
                             <constraint firstItem="jtO-4h-yTj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="RhS-Er-ceT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jtO-4h-yTj" secondAttribute="trailing" constant="50" id="Syd-gd-5RB"/>
-                            <constraint firstItem="zKj-XR-ZRH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="100" id="b6d-bU-lpB"/>
+                            <constraint firstItem="zKj-XR-ZRH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="b6d-bU-lpB"/>
+                            <constraint firstItem="Gme-IG-3Xh" firstAttribute="leading" secondItem="ePT-K2-e9l" secondAttribute="trailing" constant="50" id="lvf-yH-PZF"/>
                             <constraint firstItem="zKj-XR-ZRH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="100" id="wU6-qf-ibI"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="clearButton" destination="eIY-4g-Adv" id="dHQ-jj-dd8"/>
                         <outlet property="receiveDataTextView" destination="jtO-4h-yTj" id="kv0-U3-bFR"/>
                         <outlet property="tcpButton" destination="ePT-K2-e9l" id="Yd9-du-fZp"/>
+                        <outlet property="tcpClientButton" destination="Gme-IG-3Xh" id="yoj-Tn-Xp2"/>
                         <outlet property="udpButton" destination="zKj-XR-ZRH" id="Ixd-id-LOg"/>
                     </connections>
                 </viewController>
