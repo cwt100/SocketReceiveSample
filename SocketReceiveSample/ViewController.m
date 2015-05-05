@@ -3,7 +3,7 @@
 //  SocketReceiveSample
 //
 //  Created by Cherry_Cheng on 2015/4/28.
-//  Copyright (c) 2015年 simplo. All rights reserved.
+//  Copyright (c) 2015年 cwt100. All rights reserved.
 //
 
 #import "ViewController.h"

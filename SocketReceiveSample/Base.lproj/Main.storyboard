@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKj-XR-ZRH">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKj-XR-ZRH">
                                 <rect key="frame" x="66" y="120" width="46" height="30"/>
                                 <state key="normal" title="UDP">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -29,19 +29,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePT-K2-e9l">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePT-K2-e9l">
                                 <rect key="frame" x="162" y="120" width="46" height="30"/>
                                 <state key="normal" title="TCP">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIY-4g-Adv">
-                                <rect key="frame" x="187" y="52" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIY-4g-Adv">
+                                <rect key="frame" x="277" y="40" width="46" height="30"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gme-IG-3Xh">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gme-IG-3Xh">
                                 <rect key="frame" x="258" y="120" width="80" height="30"/>
                                 <state key="normal" title="TCP Client">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -57,9 +57,22 @@
                             <constraint firstItem="jtO-4h-yTj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="RhS-Er-ceT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jtO-4h-yTj" secondAttribute="trailing" constant="50" id="Syd-gd-5RB"/>
                             <constraint firstItem="zKj-XR-ZRH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="b6d-bU-lpB"/>
+                            <constraint firstAttribute="centerX" secondItem="eIY-4g-Adv" secondAttribute="centerX" id="e4E-r7-RZA"/>
                             <constraint firstItem="Gme-IG-3Xh" firstAttribute="leading" secondItem="ePT-K2-e9l" secondAttribute="trailing" constant="50" id="lvf-yH-PZF"/>
+                            <constraint firstItem="eIY-4g-Adv" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="uRp-GU-kmb"/>
                             <constraint firstItem="zKj-XR-ZRH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="100" id="wU6-qf-ibI"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="b6d-bU-lpB"/>
+                                <exclude reference="wU6-qf-ibI"/>
+                                <exclude reference="7ab-UK-kjv"/>
+                                <exclude reference="9VV-cQ-z3Z"/>
+                                <exclude reference="Lgx-ax-X3D"/>
+                                <exclude reference="Iw8-zB-AqG"/>
+                                <exclude reference="lvf-yH-PZF"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="clearButton" destination="eIY-4g-Adv" id="dHQ-jj-dd8"/>
