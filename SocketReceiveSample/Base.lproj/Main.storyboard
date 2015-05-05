@@ -17,20 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKj-XR-ZRH">
-                                <rect key="frame" x="66" y="120" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKj-XR-ZRH">
+                                <rect key="frame" x="0.0" y="100" width="46" height="30"/>
                                 <state key="normal" title="UDP">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jtO-4h-yTj">
-                                <rect key="frame" x="63" y="208" width="240" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jtO-4h-yTj">
+                                <rect key="frame" x="16" y="160" width="568" height="390"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePT-K2-e9l">
-                                <rect key="frame" x="162" y="120" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePT-K2-e9l">
+                                <rect key="frame" x="327" y="100" width="46" height="30"/>
                                 <state key="normal" title="TCP">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -41,8 +41,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gme-IG-3Xh">
-                                <rect key="frame" x="258" y="120" width="80" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gme-IG-3Xh">
+                                <rect key="frame" x="442" y="100" width="80" height="30"/>
                                 <state key="normal" title="TCP Client">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -50,26 +50,44 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="jtO-4h-yTj" secondAttribute="bottom" constant="50" id="0MY-Sc-9g7"/>
+                            <constraint firstItem="jtO-4h-yTj" firstAttribute="top" secondItem="zKj-XR-ZRH" secondAttribute="bottom" constant="30" id="3GI-DJ-QgW"/>
+                            <constraint firstItem="zKj-XR-ZRH" firstAttribute="top" secondItem="eIY-4g-Adv" secondAttribute="bottom" constant="30" id="4Xu-rI-SUd"/>
                             <constraint firstItem="ePT-K2-e9l" firstAttribute="top" secondItem="Gme-IG-3Xh" secondAttribute="top" id="7ab-UK-kjv"/>
                             <constraint firstItem="ePT-K2-e9l" firstAttribute="leading" secondItem="zKj-XR-ZRH" secondAttribute="trailing" constant="50" id="9VV-cQ-z3Z"/>
+                            <constraint firstItem="ePT-K2-e9l" firstAttribute="leading" secondItem="zKj-XR-ZRH" secondAttribute="trailing" id="9ct-5g-caI"/>
+                            <constraint firstItem="zKj-XR-ZRH" firstAttribute="width" secondItem="ePT-K2-e9l" secondAttribute="width" id="FQR-ZV-GJd"/>
+                            <constraint firstItem="zKj-XR-ZRH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="HRX-gi-BB9"/>
                             <constraint firstItem="jtO-4h-yTj" firstAttribute="top" secondItem="zKj-XR-ZRH" secondAttribute="bottom" constant="50" id="Iw8-zB-AqG"/>
                             <constraint firstItem="ePT-K2-e9l" firstAttribute="top" secondItem="zKj-XR-ZRH" secondAttribute="top" id="Lgx-ax-X3D"/>
+                            <constraint firstItem="zKj-XR-ZRH" firstAttribute="top" secondItem="ePT-K2-e9l" secondAttribute="top" id="Ohd-to-IOS"/>
                             <constraint firstItem="jtO-4h-yTj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="RhS-Er-ceT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jtO-4h-yTj" secondAttribute="trailing" constant="50" id="Syd-gd-5RB"/>
+                            <constraint firstItem="zKj-XR-ZRH" firstAttribute="height" secondItem="Gme-IG-3Xh" secondAttribute="height" id="U0V-Xg-KQo"/>
+                            <constraint firstItem="zKj-XR-ZRH" firstAttribute="top" secondItem="Gme-IG-3Xh" secondAttribute="top" id="ZOi-QP-Phd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gme-IG-3Xh" secondAttribute="trailing" constant="-16" id="aqu-ih-Ush"/>
                             <constraint firstItem="zKj-XR-ZRH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="b6d-bU-lpB"/>
                             <constraint firstAttribute="centerX" secondItem="eIY-4g-Adv" secondAttribute="centerX" id="e4E-r7-RZA"/>
+                            <constraint firstItem="Gme-IG-3Xh" firstAttribute="leading" secondItem="ePT-K2-e9l" secondAttribute="trailing" id="g5P-jt-oTO"/>
                             <constraint firstItem="Gme-IG-3Xh" firstAttribute="leading" secondItem="ePT-K2-e9l" secondAttribute="trailing" constant="50" id="lvf-yH-PZF"/>
+                            <constraint firstItem="Gme-IG-3Xh" firstAttribute="leading" secondItem="ePT-K2-e9l" secondAttribute="trailing" id="m0g-b9-KkG"/>
+                            <constraint firstItem="zKj-XR-ZRH" firstAttribute="width" secondItem="Gme-IG-3Xh" secondAttribute="width" id="nJ8-cv-4Wl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jtO-4h-yTj" secondAttribute="trailing" id="osW-9x-oda"/>
                             <constraint firstItem="eIY-4g-Adv" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="uRp-GU-kmb"/>
+                            <constraint firstItem="jtO-4h-yTj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="uhu-WB-h4V"/>
                             <constraint firstItem="zKj-XR-ZRH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="100" id="wU6-qf-ibI"/>
+                            <constraint firstItem="zKj-XR-ZRH" firstAttribute="height" secondItem="ePT-K2-e9l" secondAttribute="height" id="zL7-a2-nQV"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="b6d-bU-lpB"/>
                                 <exclude reference="wU6-qf-ibI"/>
+                                <exclude reference="Iw8-zB-AqG"/>
+                                <exclude reference="RhS-Er-ceT"/>
+                                <exclude reference="Syd-gd-5RB"/>
                                 <exclude reference="7ab-UK-kjv"/>
                                 <exclude reference="9VV-cQ-z3Z"/>
                                 <exclude reference="Lgx-ax-X3D"/>
-                                <exclude reference="Iw8-zB-AqG"/>
                                 <exclude reference="lvf-yH-PZF"/>
                             </mask>
                         </variation>
