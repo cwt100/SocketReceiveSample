@@ -28,6 +28,11 @@
     return self;
 }
 
+- (void)disconnect {
+    
+    [gcdAsyncSocket disconnect];
+}
+
 - (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(uint16_t)port {
     NSLog(@"didConnectToHost");
     [gcdAsyncSocket readDataWithTimeout:-1 tag:0];
@@ -37,6 +42,10 @@
     NSLog(@"tcp client receiveData: %@", data);
     [self.delegate tcpClientObject:self didReceiveData:data];
     [gcdAsyncSocket readDataWithTimeout:-1 tag:0];
+}
+
+- (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err {
+    NSLog(@"socketDidDisconnect: %@", err);
 }
 
 @end

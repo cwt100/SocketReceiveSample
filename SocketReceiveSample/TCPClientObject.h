@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic) id<TCPClientObjectDelegate> delegate;
 
+- (void)disconnect;
+
 @end
 
 @protocol TCPClientObjectDelegate

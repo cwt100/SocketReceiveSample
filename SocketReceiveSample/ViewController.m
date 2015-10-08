@@ -50,6 +50,8 @@
 
 - (void)clearTextView:(id)sender {
     self.receiveDataTextView.text = nil;
+    
+    [tcpClientObject disconnect];
 }
 
 - (void)udpReceive:(id)sender {
