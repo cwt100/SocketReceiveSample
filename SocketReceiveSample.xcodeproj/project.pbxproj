@@ -19,6 +19,7 @@
 		3C66F07C1AEF3926001211F5 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C66F07B1AEF3926001211F5 /* GCDAsyncSocket.m */; };
 		3C6EC80B1AEFE381000AE9B3 /* UDPObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6EC80A1AEFE381000AE9B3 /* UDPObject.m */; };
 		3C6EC80E1AEFEAA2000AE9B3 /* TCPObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6EC80D1AEFEAA2000AE9B3 /* TCPObject.m */; };
+		3CD37E241BCB4EDD0078E2F2 /* HttpGet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD37E231BCB4EDD0078E2F2 /* HttpGet.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		3C6EC80A1AEFE381000AE9B3 /* UDPObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDPObject.m; sourceTree = "<group>"; };
 		3C6EC80C1AEFEAA2000AE9B3 /* TCPObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPObject.h; sourceTree = "<group>"; };
 		3C6EC80D1AEFEAA2000AE9B3 /* TCPObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPObject.m; sourceTree = "<group>"; };
+		3CD37E221BCB4EDD0078E2F2 /* HttpGet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpGet.h; sourceTree = "<group>"; };
+		3CD37E231BCB4EDD0078E2F2 /* HttpGet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpGet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				3C6EC80D1AEFEAA2000AE9B3 /* TCPObject.m */,
 				3C260E5D1AF7C36100BFA325 /* TCPClientObject.h */,
 				3C260E5E1AF7C36100BFA325 /* TCPClientObject.m */,
+				3CD37E221BCB4EDD0078E2F2 /* HttpGet.h */,
+				3CD37E231BCB4EDD0078E2F2 /* HttpGet.m */,
 			);
 			path = SocketReceiveSample;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 				3C66F0571AEF2A0E001211F5 /* ViewController.m in Sources */,
 				3C66F0541AEF2A0E001211F5 /* AppDelegate.m in Sources */,
 				3C66F0511AEF2A0E001211F5 /* main.m in Sources */,
+				3CD37E241BCB4EDD0078E2F2 /* HttpGet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
