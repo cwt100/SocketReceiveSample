@@ -44,6 +44,14 @@
         [udpObject closeSocket];
     }
     
+    if (httpGet != nil) {
+        [httpGet disconnect];
+    }
+    
+    if (tcpClientObject != nil) {
+        [tcpClientObject disconnect];
+    }
+    
     udpObject = nil;
     tcpObject = nil;
     tcpClientObject = nil;
@@ -54,9 +62,6 @@
 
 - (void)clearTextView:(id)sender {
     self.receiveDataTextView.text = nil;
-    
-    [tcpClientObject disconnect];
-    
 }
 
 - (void)udpReceive:(id)sender {
@@ -108,6 +113,8 @@
 
 - (void)httpGet:(id)sender {
     
+    [self clear];
+
     httpGet = [[HttpGet alloc] init];
 }
 

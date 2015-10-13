@@ -11,4 +11,9 @@
 
 @interface HttpGet : UIActivity
 
+/**
+ * @brief Disconnect Socket.
+ */
+- (void)disconnect;
+
 @end

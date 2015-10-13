@@ -30,6 +30,10 @@
     return self;
 }
 
+- (void)disconnect {    
+    [gcdAsyncSocket disconnect];
+}
+
 - (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(uint16_t)port {
     
     NSLog(@"HpptGet didConnectToHost");
