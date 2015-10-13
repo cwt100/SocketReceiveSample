@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *tcpButton;
 @property (weak, nonatomic) IBOutlet UIButton *clearButton;
 @property (weak, nonatomic) IBOutlet UIButton *tcpClientButton;
+@property (weak, nonatomic) IBOutlet UIButton *httpGetButton;
 
 @property (weak, nonatomic) IBOutlet UITextView *receiveDataTextView;
 

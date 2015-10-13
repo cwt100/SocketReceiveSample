@@ -10,6 +10,7 @@
 #import "UDPObject.h"
 #import "TCPObject.h"
 #import "TCPClientObject.h"
+#import "HttpGet.h"
 
 @interface ViewController ()<UDPObjectDelegate, TCPObjectDelegate, TCPClientObjectDelegate>
 
@@ -19,6 +20,7 @@
     UDPObject *udpObject;
     TCPObject *tcpObject;
     TCPClientObject *tcpClientObject;
+    HttpGet *httpGet;
 }
 
 - (void)viewDidLoad {
@@ -27,6 +29,7 @@
     [self.udpButton addTarget:self action:@selector(udpReceive:) forControlEvents:UIControlEventTouchUpInside];
     [self.tcpButton addTarget:self action:@selector(tcpReceive:) forControlEvents:UIControlEventTouchUpInside];
     [self.tcpClientButton addTarget:self action:@selector(tcpClientReceive:) forControlEvents:UIControlEventTouchUpInside];
+    [self.httpGetButton addTarget:self action:@selector(httpGet:) forControlEvents:UIControlEventTouchUpInside];
     [self.clearButton addTarget:self action:@selector(clearTextView:) forControlEvents:UIControlEventTouchUpInside];
 }
 
@@ -44,6 +47,7 @@
     udpObject = nil;
     tcpObject = nil;
     tcpClientObject = nil;
+    httpGet = nil;
     
     self.receiveDataTextView.text = @"Start";
 }
@@ -52,6 +56,7 @@
     self.receiveDataTextView.text = nil;
     
     [tcpClientObject disconnect];
+    
 }
 
 - (void)udpReceive:(id)sender {
@@ -99,6 +104,11 @@
     
     NSString *xmlString = [[NSString alloc] initWithData:receiveData encoding:NSUTF8StringEncoding];
     [self.receiveDataTextView insertText:[NSString stringWithFormat:@"%@\n", xmlString]];
+}
+
+- (void)httpGet:(id)sender {
+    
+    httpGet = [[HttpGet alloc] init];
 }
 
 @end
